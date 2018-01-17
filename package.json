@@ -1,0 +1,65 @@
+{
+  "name": "kano-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "lint-staged",
+    "start": "webpack-dev-server --inline",
+    "build": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --syntax=scss",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "commitizen": "^2.9.6",
+    "css-loader": "^0.27.3",
+    "eslint": "^4.12.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "lint-staged": "^5.0.0",
+    "node-sass": "^4.5.3",
+    "postcss-load-config": "^1.2.0",
+    "postcss-loader": "^2.0.9",
+    "postcss-mixins": "6.0.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "postcss-strip-inline-comments": "^0.1.5",
+    "pre-commit": "^1.2.2",
+    "precss": "^1.4.0",
+    "prettier": "^1.9.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "stylelint": "^8.3.1",
+    "stylelint-config-recommended": "^2.0.0",
+    "stylelint-config-standard": "^18.0.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/hutber-conventional-changelog"
+    }
+  }
+}
