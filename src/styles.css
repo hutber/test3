@@ -1,3 +1,33 @@
+$kanoColour: #368DF6;
+$underLineColor: #FF6900;
+$contentBg: #292F35;
+$offWhite: #F8FAFB;
+$heartBg: #F6368A;
+$heartColor: #FBA0C8;
+
 body {
-  background: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100vw;
+  background: $kanoColour;
+  padding: 10px 0 100px;
+  text-align: center;
+
+  h1 {
+    color: #FFF;
+  }
+
+  .logo {
+    height:30px;
+    width: 70px;
+    mask: url(../dist/img/logo.svg) no-repeat;
+    background: #FFF;
+    color: #FFF;
+    text-indent: -999em;
+    margin: 0 auto;
+  }
+
 }

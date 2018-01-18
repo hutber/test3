@@ -28,16 +28,24 @@ module.exports = function() {
 			    use: ['babel-loader']
 		    },
 		    {
+			    test: /\.svg/,
+			    use: {
+				    loader: 'svg-url-loader',
+				    options: {}
+			    }
+		    },
+		    {
 			    test: /\.(jpg|png)$/,
-			    loader: 'url?limit=25000'
+			    use: 'url-loader'
 		    },
 		    {
 			    test: /\.css$/,
 			    use: [
 				    'style-loader',
-				    'postcss-loader?sourceMap&parser=postcss-scss'
-			    ],
-		    },
+				    { loader: 'css-loader', options: { importLoaders: 1 } },
+				    'postcss-loader'
+			    ]
+		    }
 	    ]
     },
 	  plugins: [

@@ -1,5 +1,10 @@
 {
   "plugins": {
-    "autoprefixer": {}
+    "autoprefixer": {"browsers": ["last 2 versions"]},
+    "postcss-strip-inline-comments": {},
+    "precss": {},
+    "postcss-nested": {},
+    "postcss-mixins": {},
+    "postcss-simple-vars": {}
   }
 }
