@@ -1,7 +1,8 @@
 $kanoColour: #368DF6;
 $underLineColor: #FF6900;
-$contentBg: #292F35;
+$links: #292F35;
 $offWhite: #F8FAFB;
+$softText: #9a9a9a;
 $heartBg: #F6368A;
 $heartColor: #FBA0C8;
 
@@ -10,10 +11,14 @@ body {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 header {
   width: 100vw;
   background: $kanoColour;
-  padding: 10px 0 100px;
+  padding: 10px;
   text-align: center;
 
   h1 {
@@ -29,5 +34,56 @@ header {
     text-indent: -999em;
     margin: 0 auto;
   }
+}
 
+.share {
+  position: relative;
+  background: $offWhite;
+  &__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &.displayingShares {
+  }
+}
+.shareBox {
+  width: 98vw;
+  margin: 0 auto 20px;
+  padding: 20px;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px 0px $softText;
+  color: $softText;
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto 25px;
+  }
+
+  h3 {
+    color: #000;
+    margin: 0 0 7px;
+  }
+
+  &__author {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__likes {
+    align-items: center;
+    font-size: 14px;
+    span {
+      height: 15px;
+      width: 22px;
+      display: inline-block;
+      mask: url(../dist/img/KANO-ICONS-HEART.svg) no-repeat;
+      background: $softText;
+      float: left;
+    }
+  }
 }
